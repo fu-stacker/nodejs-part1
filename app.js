@@ -1,28 +1,23 @@
-// global variable __dirname This variable stores the path to the current working directory.
-console.log(__dirname);
-// global variable __filename This variable stores the path to the current working file.
-console.log(__filename);
+// Global variables
+console.log("Current directory:", __dirname);
+console.log("Current file:", __filename);
 
-// creating own global variable with node js
-global.mynamee = "fuad";
-console.log(mynamee);
+// Creating custom global variable
+global.myName = "Fuad";
+console.log("My name:", myName);
 
+// Importing hello module
 const hello = require("./hello.js");
-// modules 1
 
-// sayhi("fuad");
-// sayhi("abdurehman");
-// // modules 2
-
-// console.log(add(1, 2));
-
-hello.sayhi("ms abebe");
-hello.sayhi(hello.myname);
+// Using module with direct function calls
+hello.sayHi("Ms Abebe");
+hello.sayHi(hello.myName);
 console.log(hello.sum(9, 0));
-hello.modulehi();
-// simple use of object
-let { sayhi, sum, modulehi, myname } = hello;
-sayhi("ms abebe");
-sayhi(myname);
+hello.moduleHi();
+
+// Using destructured imports
+const { sayHi, sum, moduleHi, myName: friendName } = hello;
+sayHi("Ms Abebe");
+sayHi(friendName);
 console.log(sum(9, 0));
-modulehi();
+moduleHi();
