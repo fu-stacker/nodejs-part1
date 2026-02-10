@@ -21,3 +21,5 @@ sayHi("Ms Abebe");
 sayHi(friendName);
 console.log(sum(9, 0));
 moduleHi();
+
+const fs = require("fs");
