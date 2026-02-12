@@ -22,4 +22,36 @@ sayHi(friendName);
 console.log(sum(9, 0));
 moduleHi();
 
-const fs = require("fs");
+// 1
+var x = () => console.log(`deleveper a`);
+var x = () => console.log(`developer b`);
+x();
+
+var first = {
+  x() {
+    console.log(`deleveper a`);
+  },
+};
+
+var first = {
+  x() {
+    console.log(`developer b`);
+  },
+};
+
+first.x();
+
+// var key doesn't care about the same variable like const and let  key.
+// so namespace collision will happen
+
+// 2
+
+(eat = () => {
+  console.log(`food 1`);
+})();
+(eat = () => {
+  console.log(`food 2`);
+})();
+(eat = () => {
+  console.log(`food 3`);
+})();
